@@ -1,3 +1,14 @@
+# todo
+TOMORROW
+- make summary data
+- make small multiple chart for each artist
+THURSDAY
+- make detailed on picks by each appear/disappear (using each? eventhandler? transition?)
+FRIDAY
+- build a small filter (abc? n# of picks? medium?)
+SATURDAY
+- build project and publish (vite?)
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
