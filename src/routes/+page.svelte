@@ -1,7 +1,7 @@
 <script>
     // console.log('hi')
     import { onMount } from "svelte";
-
+    
     let artists = [];
 
     onMount(async function () {
@@ -36,7 +36,14 @@ main {
     width: 300px;
 }
 h1{
-    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 60px;
+    font-family: 'IBM Plex Serif';
+    font-weight: lighter;
+    font-style: italic;
+    text-transform: capitalize;
+    color: tomato;
 }
 h2{
     font-size: 12px;
@@ -46,7 +53,7 @@ h2{
     /* width: 200px; */
 }
 </style>
-<h1>AMOEBA WHAT'S IN MY BAG</h1>
+<h1>What's in Amoeba's bag?</h1>
 <main>
     
   
@@ -57,7 +64,10 @@ h2{
         <p>
             Picks: {artist.picks.length}
         </p>
-        <hr>
+        <div>
+
+        </div>
+        <!-- <hr>
             {#each artist.picks as pick}
                 <p class="pick">
                     
@@ -66,7 +76,7 @@ h2{
                     M: {JSON.stringify(pick.medium)} 
                 </p>
                 <hr style="height:1px;border:none;background-color:#ffcc99">    
-            {/each} 
+            {/each}  -->
       </div>
     {/each}
   </main>

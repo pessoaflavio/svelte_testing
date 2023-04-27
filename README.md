@@ -2,6 +2,17 @@
 [ ]  TOMORROW  
     [ ] make summary data  
     [ ] make small multiple chart for each artist  
+
+
+    TODO  
+    - mapear todos os Medium dos items da Array (que é nosso d or data.picks)  
+    - Criar set para pegar valores unicos  
+    - OU simplesmente contar os valores  
+    - A array [] tem que conter valores para serem iterados por d3  
+    - Uma array com objetos onde os key são: medium e count  
+    - Isso deve finalizar  
+
+
 [ ] THURSDAY  
     [ ] make detailed on picks by each appear/disappear (using each? eventhandler? transition?)  
 [ ] FRIDAY  
