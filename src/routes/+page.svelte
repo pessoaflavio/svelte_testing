@@ -1,6 +1,7 @@
 <script>
     // console.log('hi')
     import { onMount } from "svelte";
+    import { reduceCategories } from '/src/routes/logicFunction.svelte';
     
     let artists = [];
 
@@ -10,13 +11,9 @@
         console.log(data.artists);
         artists = data.artists;
     });
+
+    $: groupTypes = reduceCategories
     
-
-
-    // function handleMouseOver(event) {
-    //     o
-
-    // }
     
 </script>
 <style>
@@ -63,7 +60,18 @@ h2{
         <hr>
         <p>
             Picks: {artist.picks.length}
+            <!-- calc: {JSON.stringify(groupTypes(artist.picks).val)} -->
         </p>
+        {#each Object.entries(groupTypes(artist.picks).val) as calculation}
+        <!-- {#each JSON.stringify(groupTypes(artist.picks).val) as calculation} -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="25">
+                <rect width="{calculation[1]*20}" height="7" fill="coral" />
+                <text x="0" y="17" fill="black">{calculation[0]} / {calculation[1]}</text>
+            </svg>
+            <!-- <div style="width:{calculation[1]*10}; height:10px; margin-bottom: 2px; background-color:white">
+            {calculation}
+            </div> -->
+        {/each} 
         <div>
 
         </div>
@@ -74,7 +82,9 @@ h2{
                     W: {JSON.stringify(pick.album)} 
                     A: {JSON.stringify(pick.artist)}
                     M: {JSON.stringify(pick.medium)} 
-                </p>
+
+                    <!-- testing: {groupTypes(pi)} -->
+                <!-- </p>
                 <hr style="height:1px;border:none;background-color:#ffcc99">    
             {/each}  -->
       </div>
